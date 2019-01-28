@@ -74,6 +74,22 @@ other commands, like
 
     cat export.txt | nu subtree /path/to/tree | nu stats
 
+### Remove a subtree
+
+    nu prune [path] <export.txt
+
+If you are not interested in a part of the export, you can remove a specific
+subtree with the `prune` command. The command receives a mandatory argument
+`path` that identifies the subtree to remove. The `path` needs to be an absolute
+path, e.g. `/path/to/tree`. The command prints to stdout a new export, which is
+equivalent to the one passed in input except for the absence of the node at
+`path` and all of its descendants.
+
+If you want to remove more than one subtree, you can use multiple invocations to
+`nu` and pipe them together:
+
+    cat export.txt | nu prune /first/tree | nu prune /second/tree
+
 ## License
 
 This software is released under the MIT license.
