@@ -14,7 +14,7 @@ func init() {
 }
 
 var nodesCmd = &cobra.Command{
-	Use:   "nodes",
+	Use:   "nodes [path]",
 	Short: "Print fully qualified node paths",
 	Long:  "Reads an export file from stdin and prints the fully qualified path of every node on stdout.",
 	Args:  cobra.NoArgs,

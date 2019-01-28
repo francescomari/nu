@@ -15,7 +15,7 @@ func init() {
 }
 
 var pruneCmd = &cobra.Command{
-	Use:   "prune",
+	Use:   "prune [path]",
 	Short: "Remove a subtree from an export",
 	Long:  "Reads an export file from stdin, remove a subtree from it, and prints the resulting export on stdout.",
 	Args:  cobra.ExactArgs(1),
